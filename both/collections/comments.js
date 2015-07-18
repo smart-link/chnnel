@@ -25,6 +25,16 @@ Comments.attachSchema(new SimpleSchema({
       }
     }
   },
+  email: {
+    type: String,
+    autoValue: function () {
+      if (this.isInsert) {
+        return Meteor.user().emails[0].address;
+      } else {
+        this.unset();
+      }
+    }
+  },
   productId: {
     type: String
   },

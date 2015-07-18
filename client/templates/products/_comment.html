@@ -1,13 +1,15 @@
 <template name="_xcomment">
   <div class="item item-text-wrap comment-item">
-    {{#with author}}
-      <a href="{{pathFor 'users.show'}}" class="comment-item-author">
-        {{> avatar user=this size="small" shape="circle"}}
-        {{profile.name}}
-      </a>
-    {{/with}}
+    
+    <a href="{{pathFor 'users.show'}}" class="comment-item-author">
+      {{> avatar user=this size="small" shape="circle"}}
+      {{email}}
+    </a>      
     <p>
       {{body}}
+    </p>
+    <p>
+      {{createdAt}}
     </p>
   </div>
 </template>

@@ -1,8 +1,4 @@
 Router.route('/', {
-  name: 'channel'
-});
-
-Router.route('/recent', {
   name: 'recent'
 });
 
