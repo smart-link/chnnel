@@ -52,7 +52,7 @@ Meteor.publishComposite('user', function(_id) {
     children: [
       {
         find: function(user) {
-          return Products.find({_id: {$in: user.profile.votedProductIds}});
+          // return Products.find({_id: {$in: user.profile.votedProductIds}});
         }
       }
     ]

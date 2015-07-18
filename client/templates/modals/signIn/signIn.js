@@ -1,11 +1,10 @@
 Template.signIn.events({
   'click [data-action=sign-in]': function (event, template) {
-    Meteor.loginWithMeteorDeveloperAccount({}, function (error) {
-      if (error) {
-        alert(error);
-      } else {
-        IonModal.close();
-      }
-    });
+    console.log('test');
+    IonModal.close();
+  },
+  'click [data-action=sign-up]': function (event, template) {
+    IonModal.close();
   }
 });
+
