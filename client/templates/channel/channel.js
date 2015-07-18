@@ -1,6 +1,6 @@
 Template.channel.created = function () {
   this.autorun(function () {
-    this.subscription = Meteor.subscribe('products');
+    this.subscription = Meteor.subscribe('channels');
   }.bind(this));
 };
 
@@ -15,7 +15,7 @@ Template.channel.rendered = function () {
 };
 
 Template.channel.helpers({
-  products: function () {
-    return Products.find({});
+  channels: function () {
+    return Channels.find({}, {sort: {createdAt: -1, name: -1}});
   }
 });

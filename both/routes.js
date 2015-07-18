@@ -10,7 +10,6 @@ Router.route('/products/:_id', {
   name: 'products.show'
 });
 
-
 Router.route('/channels/:_id', {
   name: 'channels.show'
 });
