@@ -17,5 +17,13 @@ Template.channel.rendered = function () {
 Template.channel.helpers({
   channels: function () {
     return Channels.find({}, {sort: {createdAt: -1, name: -1}});
+  },
+  user: function () {
+    if (Meteor.user()) {
+      return {
+        email: Meteor.user().emails[0].address,
+        id: Meteor.user()._id
+      }
+    }
   }
 });

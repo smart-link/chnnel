@@ -2,6 +2,10 @@ Template.channelsShow.created = function () {
   this.autorun(function () {
     this.subscription = Meteor.subscribe('channel', Router.current().params._id);
   }.bind(this));
+
+  if (!Meteor.loggingIn() && !Meteor.user()) {
+    IonModal.open('signIn');
+  }
 };
 
 Template.channelsShow.rendered = function () {

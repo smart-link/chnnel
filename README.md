@@ -12,5 +12,9 @@ A [Product Hunt](http://www.producthunt.com/apps/ios) clone built using [meteori
 
 ``` meteor update ```
 
+## upload to market
+
+- change package id in ```.meteor/.id```
+
 ## License
 [MIT License](https://github.com/meteoric/meteorhunt/blob/master/LICENSE)

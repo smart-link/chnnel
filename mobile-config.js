@@ -1,8 +1,8 @@
 App.info({
-  name: 'MeteorHunt',
+  name: 'Chnnel',
   description: 'Submit and vote on products made with Meteor',
-  author: 'Nick Wientge',
-  website: 'http://exygen.io',
+  author: 'dev@smart-link.io',
+  website: 'smart-link.io',
   version: '0.0.1'
 });
 
