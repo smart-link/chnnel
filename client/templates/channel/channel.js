@@ -16,6 +16,6 @@ Template.channel.rendered = function () {
 
 Template.channel.helpers({
   products: function () {
-    return Products.find({}, {sort: {numberOfVotes: -1, name: -1}});
+    return Products.find({});
   }
 });
