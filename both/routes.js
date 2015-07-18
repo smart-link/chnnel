@@ -1,5 +1,5 @@
 Router.route('/', {
-  name: 'recent'
+  name: 'channel'
 });
 
 Router.route('/products/:_id', {

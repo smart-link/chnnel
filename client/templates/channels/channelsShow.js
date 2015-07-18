@@ -14,9 +14,13 @@ Template.channelsShow.rendered = function () {
   }.bind(this));
 };
 
+Template.registerHelper("prettifyDate", function(timestamp) {
+  return moment(new Date(timestamp)).fromNow();
+});
+
 Template.channelsShow.helpers({
   channel: function () {
-    return Products.findOne({_id: Router.current().params._id});
+    return Channels.findOne({_id: Router.current().params._id});
   },
 
   comments: function () {

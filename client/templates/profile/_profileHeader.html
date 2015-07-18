@@ -1,8 +1,9 @@
 <template name="_profileHeader">
   <div class="profile-header">
-    {{> avatar user=this size="large" shape="circle"}}
+    {{> avatar userId=id size="large" shape="circle"}}
+    
+    <div style="color: white; margin-top: 20px;">
+      {{email}}
+    </div>
   </div>
-  <h3>
-    {{email}}
-  </h3>
 </template>

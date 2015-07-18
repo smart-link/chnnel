@@ -6,9 +6,11 @@ A [Product Hunt](http://www.producthunt.com/apps/ios) clone built using [meteori
 
 ## Running the app
 
-```
-cp settings.json.example settings.json
-meteor --settings settings.json
-```
+``` meteor ```
+
+### when error occured
+
+``` meteor update ```
+
 ## License
 [MIT License](https://github.com/meteoric/meteorhunt/blob/master/LICENSE)

@@ -17,5 +17,16 @@ Template.recent.rendered = function () {
 Template.recent.helpers({
   products: function () {
     return Products.find({}, {sort: {createdAt: -1, name: -1}});
+  },
+  user: function () {
+    if (Meteor.user()) {
+      return {
+        email: Meteor.user().emails[0].address,
+        id: Meteor.user()._id
+      }
+    }
   }
 });
+
+
+

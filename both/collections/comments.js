@@ -35,7 +35,7 @@ Comments.attachSchema(new SimpleSchema({
       }
     }
   },
-  productId: {
+  channelId: {
     type: String
   },
   createdAt: {

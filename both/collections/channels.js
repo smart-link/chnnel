@@ -32,14 +32,6 @@ Channels.search = function(query) {
 };
 
 Channels.attachSchema(new SimpleSchema({
-  url: {
-    type: String,
-    autoform: {
-      'label-type': 'placeholder',
-      placeholder: 'Channel URL'
-    },
-    max: 200
-  },
   name: {
     type: String,
     autoform: {

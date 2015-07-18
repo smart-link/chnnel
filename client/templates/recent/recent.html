@@ -7,13 +7,15 @@
   {{/contentFor}}
 
   {{#contentFor "headerButtonRight"}}
+    {{#with user}}
     <button class="button button-clear pull-right button-positive" data-ion-modal="newProduct">
       {{> ionIcon icon='ios-plus-empty'}}
     </button>
+    {{/with}}
   {{/contentFor}}
 
   {{#contentFor "headerTitle"}}
-    <h1 class="title">Recent</h1>
+    <h1 class="title">Channel</h1>
   {{/contentFor}}
 
   {{#ionView}}
