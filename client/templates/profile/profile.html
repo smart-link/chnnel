@@ -15,11 +15,7 @@
     {{#ionContent}}
       {{#with user}}
         {{> _profileHeader}}
-        {{#ionList}}
-          {{#each votedProducts}}
-            {{> _productItem product=this path="products.show"}}
-          {{/each}}
-        {{/ionList}}
+        
       {{else}}
         <div class="empty-view">
           {{> ionIcon icon="ios-person"}}
