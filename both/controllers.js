@@ -2,7 +2,7 @@ AppController = RouteController.extend({
   layoutTemplate: 'appLayout'
 });
 
-TrendingController = AppController.extend({});
+ChannelController = AppController.extend({});
 
 RecentController = AppController.extend({});
 
