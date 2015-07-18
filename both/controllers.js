@@ -6,6 +6,8 @@ ChannelController = AppController.extend({});
 
 RecentController = AppController.extend({});
 
+ChannelsShowController = AppController.extend({});
+
 ProductsShowController = AppController.extend({});
 
 UsersShowController = AppController.extend({});

@@ -1,3 +1,40 @@
+Meteor.publish('channels', function() {
+  return Channels.find();
+});
+
+
+Meteor.publishComposite('channel', function(_id) {
+  return {
+    find: function() {
+      return Channels.find({_id: _id});
+    },
+    children: [
+      {
+        find: function(channel) {
+          return Meteor.users.find({_id: channel.userId});
+        }
+      },
+      {
+        find: function(channel) {
+          return Meteor.users.find({_id: channel.voterIds});
+        }
+      },
+      {
+        find: function(channel) {
+          return Comments.find({productId: channel._id});
+        },
+        children: [
+          {
+            find: function(comment) {
+              return Meteor.users.find({_id: comment.userId});
+            }
+          }
+        ]
+      }
+    ]
+  };
+});
+
 Meteor.publish('products', function() {
   return Products.find();
 });

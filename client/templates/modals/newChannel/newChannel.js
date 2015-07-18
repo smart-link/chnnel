@@ -3,7 +3,7 @@ AutoForm.hooks({
     onSuccess: function (operation, result, template) {
       IonModal.close();
       IonKeyboard.close();
-      Router.go('products.show', {_id: result});
+      Router.go('channels.show', {_id: result});
     }
   }
 });

@@ -1,11 +1,11 @@
 Template.appLayout.rendered = function () {
-  Session.set('currentTab', 'trending');
+  Session.set('currentTab', 'channel');
 };
 
 Template.appLayout.events({
-  'click [data-action=share-product]': function (event, template) {
+  'click [data-action=share-channel]': function (event, template) {
     IonActionSheet.show({
-      titleText: 'Share Product',
+      titleText: 'Share Channel',
       buttons: [
         { text: '<i class="icon ion-social-twitter"></i> Tweet' },
         { text: '<i class="icon ion-ios-email"></i> Email' },
