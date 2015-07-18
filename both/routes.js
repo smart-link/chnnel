@@ -1,5 +1,5 @@
 Router.route('/', {
-  name: 'trending'
+  name: 'channel'
 });
 
 Router.route('/recent', {
