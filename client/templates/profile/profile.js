@@ -20,8 +20,11 @@ Template.profile.rendered = function () {
 
 Template.profile.helpers({
   user: function () {
-    if (Meteor.userId()) {
-      return Meteor.user();
+    if (Meteor.user()) {
+      return {
+        email: Meteor.user().emails[0].address,
+        id: Meteor.user()._id
+      }
     }
   }
 });
